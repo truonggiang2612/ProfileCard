@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Đặt biến chung*/
+:root {
+    --primary-color: #f2726a;
+}
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #00853e, #58c878);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: white;
+}
+.box {
+    color: rgb(10, 54, 197);
+}
+
+.card {
+    background: #242628;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden; /*những gì nằm bên ngoài card đều ẩn đi*/
+    margin-top: 50px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center; /*để ảnh lúc nào cũng căn ra giữa*/
+}
+
+.card__img {
+    width: 120px;
+    height: 120px;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px auto;
+    cursor: pointer;
+    transform: translateY(25px); /*để hình ảnh lùi xuống 25px theo trục Y*/
+}
+
+.card h2 {
+    margin-top: 35px;
+}
+
+.card__social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__social a {
+    color: white;
+    margin: 25px 20px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+.card__social a:hover {
+    color: #ec1894;
+}
+
+.card button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #f2726a;
+}
+
+
+/*Hover vào ảnh phóng to lên*/
+/*chú ý vào các thuộc tính đã set trên card__img*/
+.card__img:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    transform: unset;
+    border: none;
+    transition: 0.4s;
+}
+
+.modal {
+    width: 280px;
+    height: 140px;
+    background-color: #ddd;
+    border-radius: 15px;
+    margin-top: 20px;
+
+}
+.modal h2, p {
+    text-align: center;
+    padding: 5px;
+    color: #2175e2;
+}
+.modal i {
+    color: black;
+    font-size: 24px;
+    float: right;
+    padding: 0 10px 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
